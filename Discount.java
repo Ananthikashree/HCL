@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Discount {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Cart Value: ");
+        double cartValue = sc.nextDouble();
+
+        double discount = 0;
+        double finalAmount;
+
+        if (cartValue > 5000) {
+            discount = cartValue * 0.20;
+        } 
+        else if (cartValue > 2000) {
+            discount = cartValue * 0.10;
+        } 
+        else {
+            discount = 0;
+        }
+
+        finalAmount = cartValue - discount;
+
+        System.out.println("Discount: " + discount);
+        System.out.println("Final Payment Amount: " + finalAmount);
+
+        sc.close();
+    }
+}
